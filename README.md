@@ -67,26 +67,9 @@
 - `lib/widgets/empty_state.dart` – حالة عدم وجود بيانات
 - `lib/widgets/filter_bottom_sheet.dart` – Bottom Sheet للفلترة
 
----
 
-## 🚀 خطوات التشغيل
 
-### المتطلبات
-- Flutter SDK (3.x أو أعلى)
-- تأكد من الإعداد:
-```bash
-flutter doctor
-```
 
-### 1. تنزيل الحزم
-```bash
-flutter pub get
-```
-
-### 2. تشغيل التطبيق
-```bash
-flutter run
-```
 
 ### 3. ما الذي ستراه؟
 - **الشاشة الرئيسية**: قائمة بالـ Follow-Ups في كروت
@@ -110,13 +93,7 @@ flutter run
 - **Light Theme**: ألوان فاتحة مع Gradient أزرق فاتح
 - **Dark Theme**: ألوان داكنة مع Gradient أزرق داكن/رمادي
 
-### الكود
-```dart
-// ThemeCubit يدير الثيم
-ThemeCubit(themeStorageService)
-  ..toggleTheme() // تبديل فوري
-  ..setTheme(ThemeMode.dark) // تعيين مباشر
-```
+
 
 ---
 
