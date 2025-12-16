@@ -136,19 +136,6 @@ ThemeCubit(themeStorageService)
 - **اللون**: **رمادي** (`Theme.colorScheme.outline`)
 - **الاستخدام**: Badge + Dot indicator في الكارت
 
-### الكود
-```dart
-Color _statusColor(BuildContext context) {
-  switch (followUp.status) {
-    case FollowUpStatus.completed:
-      return Colors.green.shade600;  // أخضر
-    case FollowUpStatus.scheduled:
-      return Colors.orange.shade600; // أصفر/برتقالي
-    case FollowUpStatus.none:
-      return Theme.of(context).colorScheme.outline; // رمادي
-  }
-}
-```
 
 ---
 
@@ -166,20 +153,6 @@ Color _statusColor(BuildContext context) {
 - **تجربة مستخدم أفضل**: لا توجد تأخيرات أو "lag" أثناء الكتابة
 - **توفير موارد**: تقليل عدد العمليات غير الضرورية
 
-### الكود
-```dart
-void onSearchChanged(String query) {
-  _debounceTimer?.cancel(); // إلغاء الفلترة السابقة
-  _debounceTimer = Timer(const Duration(milliseconds: 300), () {
-    // بعد 300ms → تطبيق الفلترة
-    emit(
-      state.copyWith(
-        searchQuery: query,
-      ).withAppliedFilters(),
-    );
-  });
-}
-```
 
 ### الاستخدام
 - اكتب في خانة البحث → انتظر جزء من الثانية → النتائج تظهر تلقائيًا
@@ -245,19 +218,8 @@ lib/
 ✅ Empty State handling  
 ✅ Clean Architecture مع Cubit + get_it  
 
----
 
-## 🔗 Repository
 
-[GitHub Repository](https://github.com/hossamedhat/Follow_Ups)
 
----
 
-## 📄 License
-
-This project is private and not licensed for public use.
-
----
-
-**تم إنشاء المشروع باستخدام Flutter و Clean Architecture** 🚀
 
